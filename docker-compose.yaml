@@ -1,0 +1,15 @@
+services:
+  # nginx
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+  
+  app:
+    build: 
+      dockerfile: 
+          dockerfile: ./php/Dockerfile
+  # php
+
+  # mysql
+  # redis
