@@ -15,4 +15,18 @@ services:
       - ./app:/app
 
   # mysql
+  db:
+    image: mysql:8.3
+    volumes:
+      - mysqldata:/var/lib/mysql
+    ports:
+      - "4306:3306" #host:container
+    environment:
+      MYSQL_ROOT_PASSWORD : rootpassword
+      MYSQL_DATABASE: translate-db
+
   # redis
+
+volumes:
+  mysqldata:
+  
